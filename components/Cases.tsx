@@ -1,97 +1,44 @@
-import { cases, waLink } from "../lib/site";
-
-const extra: Record<string, { badge: string; real: boolean; points: string[]; cta: string }> = {
-  ImportExpress: {
-    badge: "Cliente real — en producción",
-    real: true,
-    points: [
-      "Tienda online funcionando con clientes reales",
-      "Catálogo, pedidos y panel de administración",
-      "Calidad profesional: tests automáticos y copias de seguridad",
-    ],
-    cta: "Hola Nicolás, quiero algo como ImportExpress para mi negocio.",
-  },
-  "Brinines AI": {
-    badge: "Negocio real — ventas reales",
-    real: true,
-    points: [
-      "Sistema que ordena ventas por Instagram y WhatsApp",
-      "CRM con clientes, pedidos y automatizaciones",
-      "201 seguidores, 5 productos, venta directa sin intermediarios",
-    ],
-    cta: "Hola Nicolás, quiero un sistema como Brinines AI para mis ventas.",
-  },
-  "Alquiler temporario turistico Tucuman": {
-    badge: "Demo conceptual",
-    real: false,
-    points: [
-      "Buscador de propiedades que sí responde",
-      "Fichas con galería y consulta por WhatsApp por propiedad",
-      "Pensado para cabañas y alquileres en Tafí, El Mollar y San Javier",
-    ],
-    cta: "Hola Nicolás, tengo un alquiler temporario y quiero una página así.",
-  },
-};
-
-const titleOf = (name: string) =>
-  name === "Alquiler temporario turistico Tucuman"
-    ? "Alquiler temporario turístico"
-    : name;
+import Link from "next/link";
+import { trabajos } from "../lib/trabajos";
 
 export default function Cases() {
   return (
-    <section id="casos" className="border-y border-white/10 bg-ink-2">
+    <section id="proyectos" className="border-y border-white/10 bg-ink-2">
       <div className="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
         <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-white md:text-5xl">
-          Trabajos que ya están vendiendo.
+          En qué estoy trabajando.
         </h2>
-        <div className="mt-12">
-          {cases.map((c, i) => {
-            const e = extra[c.name] ?? { badge: "", real: true, points: [], cta: "" };
-            return (
-              <article
-                key={c.name}
-                className="grid gap-6 border-t border-white/10 py-10 last:border-b lg:grid-cols-[60px_1.2fr_1fr_auto] lg:items-start"
-              >
-                <span className="font-mono text-sm font-medium text-white/35">
-                  {String(i + 1).padStart(2, "0")}
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+          {trabajos.map((t) => (
+            <Link
+              key={t.slug}
+              href={`/trabajos/${t.slug}`}
+              className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-xl border border-white/10"
+            >
+              <img
+                src={t.fondo}
+                alt=""
+                aria-hidden
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent"
+              />
+              <div className="relative p-7">
+                <h3 className="text-2xl font-bold tracking-tight text-white">
+                  {t.nombre}
+                </h3>
+                <p className="mt-1.5 text-sm leading-snug text-white/65">
+                  {t.tagline}
+                </p>
+                <span className="mt-4 inline-block text-sm font-semibold text-gold">
+                  Ver proyecto →
                 </span>
-                <div>
-                  <span
-                    className={`inline-block rounded-full border px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.18em] ${
-                      e.real
-                        ? "border-gold/40 text-gold"
-                        : "border-white/25 text-white/60"
-                    }`}
-                  >
-                    {e.badge}
-                  </span>
-                  <h3 className="mt-4 text-2xl font-bold tracking-tight text-white md:text-3xl">
-                    {titleOf(c.name)}
-                  </h3>
-                  <p className="mt-2 max-w-md text-[15px] leading-relaxed text-white/55">
-                    {c.description}
-                  </p>
-                </div>
-                <ul className="space-y-2.5 text-sm leading-snug text-white/75">
-                  {e.points.map((pt) => (
-                    <li key={pt} className="flex gap-2.5">
-                      <span className="font-bold text-gold">✓</span>
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={waLink(e.cta)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whitespace-nowrap rounded-lg border border-white/25 px-5 py-3 text-center text-sm font-semibold text-white transition hover:border-gold hover:text-gold"
-                >
-                  Quiero algo así →
-                </a>
-              </article>
-            );
-          })}
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

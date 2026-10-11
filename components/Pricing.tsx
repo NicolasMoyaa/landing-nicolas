@@ -39,7 +39,7 @@ export default function Pricing() {
                 href={waLink(`Hola Nicolás, quiero presupuesto del servicio ${s.name} (desde ${s.priceFrom}).`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-shine mt-7 block rounded-lg bg-brand px-5 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-brand-deep"
+                className="btn-shine btn-shine-fast mt-7 block rounded-lg bg-brand px-5 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-brand-deep"
               >
                 Pedir presupuesto
               </a>

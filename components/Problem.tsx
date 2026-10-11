@@ -42,7 +42,7 @@ export default function Problem() {
         </div>
         <p className="mt-10 text-lg font-semibold text-white">
           Todo esto tiene solución — y más barata de lo que creés.{" "}
-          <a href="#contacto" className="text-gold underline underline-offset-4 hover:brightness-110">
+          <a href="/#contacto" className="text-gold underline underline-offset-4 hover:brightness-110">
             Pedila acá →
           </a>
         </p>

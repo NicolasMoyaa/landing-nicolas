@@ -23,17 +23,14 @@ export default function Services() {
           Elegí lo que tu negocio necesita hoy.
         </h2>
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
-          {services.map((s, i) => {
+          {services.map((s) => {
             const d = detail[s.name] ?? { outcome: "", points: [] };
             return (
               <article
                 key={s.name}
                 className="flex flex-col rounded-xl border border-white/10 bg-white/[0.03] p-8"
               >
-                <span className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-white/40">
-                  S.{String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-3 text-xl font-bold tracking-tight text-white">
+                <h3 className="text-xl font-bold tracking-tight text-white">
                   {s.name}
                 </h3>
                 <p className="mt-4 text-4xl font-extrabold tracking-tight text-white">

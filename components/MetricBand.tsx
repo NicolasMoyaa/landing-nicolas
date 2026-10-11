@@ -23,9 +23,6 @@ export default function MetricBand() {
             </div>
           ))}
         </div>
-        <p className="mt-10 text-xs text-white/35">
-          Métricas de producción 2026 — ImportExpress + Brinines.
-        </p>
       </div>
     </section>
   );

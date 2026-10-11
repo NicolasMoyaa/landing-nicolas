@@ -38,10 +38,6 @@ export default function Hero() {
         className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent"
       />
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 pb-12 pt-32 md:px-6 md:pt-36">
-        <p className="font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-white/60">
-          <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-brand align-middle" />
-          E-commerce real en producción — Tucumán, Argentina
-        </p>
         <h1 className="mt-6 max-w-4xl text-[42px] font-semibold leading-[1.04] tracking-[-0.03em] md:text-7xl">
           Tu negocio vendiendo todos los días,{" "}
           <span className="text-gold">incluso cuando vos descansás.</span>
@@ -58,13 +54,10 @@ export default function Hero() {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-shine btn-shine-gold rounded-lg bg-white px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-gold"
+            className="btn-shine btn-shine-gold btn-shine-fast rounded-lg bg-white px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-gold"
           >
             Pedir presupuesto por WhatsApp →
           </a>
-          <p className="text-center text-sm text-white/55 sm:text-left">
-            Respuesta directa — sin bots ni formularios.
-          </p>
         </div>
       </div>
       <div className="relative border-t border-white/15">
@@ -81,7 +74,7 @@ export default function Hero() {
             ))}
           </div>
           <a
-            href="#casos"
+            href="/#proyectos"
             className="rounded-lg border border-white/30 px-5 py-2.5 text-center text-sm font-semibold text-white transition hover:border-gold hover:text-gold"
           >
             Ver trabajos

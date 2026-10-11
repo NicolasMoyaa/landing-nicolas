@@ -65,7 +65,10 @@ details[open] .faq-plus {
     transparent
   );
   transform: skewX(-18deg);
-  animation: shine-sweep 4.5s ease-in-out infinite;
+  animation: shine-sweep 3s ease-in-out infinite;
+}
+.btn-shine-fast::after {
+  animation-duration: 2.5s;
 }
 .btn-shine-gold::after {
   background: linear-gradient(
