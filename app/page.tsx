@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import TrustBar from "../components/TrustBar";
+import MetricBand from "../components/MetricBand";
 import Problem from "../components/Problem";
 import Process from "../components/Process";
 import Services from "../components/Services";
@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <TrustBar />
+      <MetricBand />
       <Problem />
       <Process />
       <Services />
