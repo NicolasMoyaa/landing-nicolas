@@ -1,3 +1,5 @@
+import Eyebrow from "./Eyebrow";
+
 const faqs = [
   {
     q: "¿Cuánto tarda mi página?",
@@ -24,23 +26,24 @@ const faqs = [
 export default function Faq() {
   return (
     <section id="faq" className="bg-white">
-      <div className="mx-auto max-w-3xl px-4 py-16">
-        <p className="text-xs font-bold uppercase tracking-widest text-emerald-700">
-          Preguntas frecuentes
-        </p>
-        <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-neutral-900 md:text-4xl">
+      <div className="mx-auto max-w-3xl px-4 py-20 md:py-28">
+        <Eyebrow index="06">Preguntas frecuentes</Eyebrow>
+        <h2 className="mt-4 text-3xl font-semibold tracking-[-0.02em] text-ink md:text-5xl">
           Sacate las dudas
         </h2>
-        <div className="mt-8 space-y-3">
+        <div className="mt-10 border-b border-ink/10">
           {faqs.map((f) => (
             <details
               key={f.q}
-              className="group rounded-2xl border border-neutral-200 bg-neutral-50 px-5 py-4"
+              className="group border-t border-ink/10 py-5"
             >
-              <summary className="cursor-pointer font-bold text-neutral-900">
+              <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold tracking-tight text-ink">
                 {f.q}
+                <span className="faq-plus font-mono text-xl font-medium text-ink/40">
+                  +
+                </span>
               </summary>
-              <p className="mt-2 text-neutral-600">{f.a}</p>
+              <p className="mt-3 max-w-2xl leading-relaxed text-ink/60">{f.a}</p>
             </details>
           ))}
         </div>

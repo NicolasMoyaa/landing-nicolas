@@ -3,3 +3,5 @@ node_modules
 .env*.local
 pnpm-debug.log*
 next-env.d.ts
+
+.vercel
