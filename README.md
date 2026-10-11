@@ -1,3 +1,17 @@
-# landing-nicolas
+# Landing Nicolas
 
-Landing comercial freelance — Nico (Tucuman). Ver loop-engine loops/DAG-LANDING-2026-10-11.md para contrato.
+Base Next.js 16 con App Router, TypeScript y Tailwind CSS 4.
+
+## Desarrollo
+
+```bash
+pnpm install
+pnpm dev
+```
+
+## Produccion
+
+```bash
+pnpm build
+pnpm start
+```
