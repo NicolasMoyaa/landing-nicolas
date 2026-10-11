@@ -11,11 +11,24 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative flex min-h-[100svh] flex-col overflow-hidden bg-ink text-white">
       <img
-        src="/hero-comerciante.jpg"
-        alt="Comerciante atendiendo mensajes de clientes en su negocio"
+        src="/hero-noche-poster.jpg"
+        alt=""
+        aria-hidden
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover object-[center_25%]"
+        className="absolute inset-0 h-full w-full object-cover md:hidden"
       />
+      <video
+        aria-hidden
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/hero-noche-poster.jpg"
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
+      >
+        <source src="/hero-noche.mp4" type="video/mp4" />
+      </video>
       <div
         aria-hidden
         className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/15"
@@ -26,12 +39,12 @@ export default function Hero() {
       />
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 pb-12 pt-32 md:px-6 md:pt-36">
         <p className="font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-white/60">
-          <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-mint align-middle" />
+          <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-brand align-middle" />
           E-commerce real en producción — Tucumán, Argentina
         </p>
         <h1 className="mt-6 max-w-4xl text-[42px] font-semibold leading-[1.04] tracking-[-0.03em] md:text-7xl">
           Tu negocio vendiendo todos los días,{" "}
-          <span className="text-mint">incluso cuando vos descansás.</span>
+          <span className="text-gold">incluso cuando vos descansás.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
           Sitios rápidos, catálogos digitales y pedidos por WhatsApp para
@@ -45,7 +58,7 @@ export default function Hero() {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-white px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-mint"
+            className="btn-shine btn-shine-gold rounded-lg bg-white px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-gold"
           >
             Pedir presupuesto por WhatsApp →
           </a>
@@ -69,7 +82,7 @@ export default function Hero() {
           </div>
           <a
             href="#casos"
-            className="rounded-lg border border-white/30 px-5 py-2.5 text-center text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-ink"
+            className="rounded-lg border border-white/30 px-5 py-2.5 text-center text-sm font-semibold text-white transition hover:border-gold hover:text-gold"
           >
             Ver trabajos
           </a>

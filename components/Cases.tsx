@@ -1,5 +1,4 @@
 import { cases, waLink } from "../lib/site";
-import Eyebrow from "./Eyebrow";
 
 const extra: Record<string, { badge: string; real: boolean; points: string[]; cta: string }> = {
   ImportExpress: {
@@ -41,13 +40,10 @@ const titleOf = (name: string) =>
 
 export default function Cases() {
   return (
-    <section id="casos" className="bg-ink text-white">
+    <section id="casos" className="border-y border-white/10 bg-ink-2">
       <div className="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
-        <Eyebrow index="04" dark>
-          Trabajos
-        </Eyebrow>
-        <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.02em] md:text-5xl">
-          Cosas reales, no promesas
+        <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-white md:text-5xl">
+          Trabajos que ya están vendiendo.
         </h2>
         <div className="mt-12">
           {cases.map((c, i) => {
@@ -64,13 +60,13 @@ export default function Cases() {
                   <span
                     className={`inline-block rounded-full border px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.18em] ${
                       e.real
-                        ? "border-mint/40 text-mint"
-                        : "border-amber-300/40 text-amber-300"
+                        ? "border-gold/40 text-gold"
+                        : "border-white/25 text-white/60"
                     }`}
                   >
                     {e.badge}
                   </span>
-                  <h3 className="mt-4 text-2xl font-bold tracking-tight md:text-3xl">
+                  <h3 className="mt-4 text-2xl font-bold tracking-tight text-white md:text-3xl">
                     {titleOf(c.name)}
                   </h3>
                   <p className="mt-2 max-w-md text-[15px] leading-relaxed text-white/55">
@@ -80,7 +76,7 @@ export default function Cases() {
                 <ul className="space-y-2.5 text-sm leading-snug text-white/75">
                   {e.points.map((pt) => (
                     <li key={pt} className="flex gap-2.5">
-                      <span className="font-bold text-mint">✓</span>
+                      <span className="font-bold text-gold">✓</span>
                       {pt}
                     </li>
                   ))}
@@ -89,7 +85,7 @@ export default function Cases() {
                   href={waLink(e.cta)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="whitespace-nowrap rounded-lg border border-white/25 px-5 py-3 text-center text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-ink"
+                  className="whitespace-nowrap rounded-lg border border-white/25 px-5 py-3 text-center text-sm font-semibold text-white transition hover:border-gold hover:text-gold"
                 >
                   Quiero algo así →
                 </a>

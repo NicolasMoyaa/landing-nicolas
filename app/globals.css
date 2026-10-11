@@ -4,10 +4,9 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jbmono), ui-monospace, SFMono-Regular, monospace;
 
-  --color-ink: #0a0b0d;
-  --color-ink-2: #141619;
-  --color-paper: #f6f5f1;
-  --color-mint: #4ade80;
+  --color-ink: #050607;
+  --color-ink-2: #0c0e11;
+  --color-gold: #ffe81f;
   --color-brand: #16a34a;
   --color-brand-deep: #0e7a37;
 }
@@ -17,16 +16,16 @@ html {
 }
 
 body {
-  background: #fff;
-  color: var(--color-ink);
+  background: var(--color-ink);
+  color: #fff;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: var(--color-brand);
-  color: #fff;
+  background: var(--color-gold);
+  color: var(--color-ink);
 }
 
 section[id] {
@@ -44,4 +43,50 @@ details[open] .faq-plus {
 }
 .faq-plus {
   transition: transform 0.2s ease;
+}
+
+/* Destello que cruza el botón (sutil, maduro) */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  width: 35%;
+  left: -60%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: skewX(-18deg);
+  animation: shine-sweep 4.5s ease-in-out infinite;
+}
+.btn-shine-gold::after {
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 232, 31, 0.45),
+    transparent
+  );
+}
+@keyframes shine-sweep {
+  0%,
+  55% {
+    left: -60%;
+  }
+  85%,
+  100% {
+    left: 135%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine::after {
+    animation: none;
+  }
 }

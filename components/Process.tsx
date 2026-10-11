@@ -1,5 +1,3 @@
-import Eyebrow from "./Eyebrow";
-
 const steps = [
   {
     n: "01",
@@ -20,22 +18,21 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="bg-white">
+    <section className="border-y border-white/10 bg-ink-2">
       <div className="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
-        <Eyebrow index="02">Cómo trabajo</Eyebrow>
-        <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.02em] text-ink md:text-5xl">
-          Simple, en 3 pasos
+        <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-white md:text-5xl">
+          Cómo vamos a trabajar juntos.
         </h2>
-        <div className="mt-12 grid grid-cols-1 gap-px border border-ink/10 bg-ink/10 md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-px border border-white/10 bg-white/10 md:grid-cols-3">
           {steps.map((s) => (
-            <article key={s.n} className="bg-white p-8">
-              <span className="font-mono text-sm font-medium text-brand">
+            <article key={s.n} className="bg-ink-2 p-8">
+              <span className="font-mono text-sm font-medium text-gold">
                 {s.n}
               </span>
-              <h3 className="mt-4 text-xl font-bold tracking-tight text-ink">
+              <h3 className="mt-4 text-xl font-bold tracking-tight text-white">
                 {s.title}
               </h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-ink/60">
+              <p className="mt-3 text-[15px] leading-relaxed text-white/60">
                 {s.text}
               </p>
             </article>
