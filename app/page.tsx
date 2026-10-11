@@ -8,20 +8,37 @@ import Cases from "../components/Cases";
 import Pricing from "../components/Pricing";
 import Faq from "../components/Faq";
 import FinalCta from "../components/FinalCta";
+import Reveal from "../components/Reveal";
 
 export default function Home() {
   return (
     <main>
       <Header />
       <Hero />
-      <MetricBand />
-      <Problem />
-      <Process />
-      <Services />
-      <Cases />
-      <Pricing />
-      <Faq />
-      <FinalCta />
+      <Reveal>
+        <MetricBand />
+      </Reveal>
+      <Reveal>
+        <Problem />
+      </Reveal>
+      <Reveal>
+        <Process />
+      </Reveal>
+      <Reveal>
+        <Services />
+      </Reveal>
+      <Reveal>
+        <Cases />
+      </Reveal>
+      <Reveal>
+        <Pricing />
+      </Reveal>
+      <Reveal>
+        <Faq />
+      </Reveal>
+      <Reveal>
+        <FinalCta />
+      </Reveal>
     </main>
   );
 }

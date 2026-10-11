@@ -1,18 +1,23 @@
+import { waLink } from "../lib/site";
+
 const steps = [
   {
-    n: "01",
-    title: "Auditoría y propuesta clara",
-    text: "Me contás tu negocio, te digo qué te conviene, cuánto sale y en cuánto tiempo. Presupuesto sin compromiso.",
+    paso: "Paso 1",
+    title: "Charlamos de tu negocio",
+    text: "Me contás qué vendés, cómo trabajás hoy y qué te frena. Te digo qué te conviene, cuánto sale y en cuánto tiempo lo tenés.",
+    meta: "Sin compromiso",
   },
   {
-    n: "02",
-    title: "Construcción rápida",
-    text: "Landing en días, tienda en semanas. Ves avances reales, no promesas.",
+    paso: "Paso 2",
+    title: "Lo construyo a la vista",
+    text: "Landing en días, tienda en semanas. Ves avances reales mientras lo armo, no renders ni promesas.",
+    meta: "Avances visibles",
   },
   {
-    n: "03",
-    title: "Medición y acompañamiento",
-    text: "Medimos consultas y ventas recuperadas, mejoramos y te doy 30 días de soporte incluidos.",
+    paso: "Paso 3",
+    title: "Medimos y te acompaño",
+    text: "Miramos consultas y ventas recuperadas, ajustamos lo necesario y tenés 30 días de soporte incluidos.",
+    meta: "Soporte 30 días",
   },
 ];
 
@@ -23,21 +28,41 @@ export default function Process() {
         <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-white md:text-5xl">
           Cómo vamos a trabajar juntos.
         </h2>
-        <div className="mt-12 grid grid-cols-1 gap-px border border-white/10 bg-white/10 md:grid-cols-3">
+        <p className="mt-4 max-w-2xl leading-relaxed text-white/60">
+          Sin reuniones eternas ni tecnicismos: así avanza tu proyecto, de la
+          primera charla a la entrega.
+        </p>
+        <ol className="mt-12 border-t border-white/10">
           {steps.map((s) => (
-            <article key={s.n} className="bg-ink-2 p-8">
+            <li
+              key={s.paso}
+              className="grid items-baseline gap-2 border-b border-white/10 py-8 md:grid-cols-[130px_1fr_1.3fr_auto] md:gap-6"
+            >
               <span className="font-mono text-sm font-medium text-gold">
-                {s.n}
+                {s.paso}
               </span>
-              <h3 className="mt-4 text-xl font-bold tracking-tight text-white">
+              <h3 className="text-xl font-bold tracking-tight text-white md:text-2xl">
                 {s.title}
               </h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-white/60">
+              <p className="max-w-xl leading-relaxed text-white/60">
                 {s.text}
               </p>
-            </article>
+              <span className="w-fit rounded-full border border-gold/30 px-3.5 py-1.5 text-xs font-semibold text-gold">
+                {s.meta}
+              </span>
+            </li>
           ))}
-        </div>
+        </ol>
+        <a
+          href={waLink(
+            "Hola Nicolás, quiero arrancar con el paso 1: charlar de mi negocio."
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-shine btn-shine-fast mt-10 inline-block rounded-lg bg-white px-8 py-4 text-base font-semibold text-ink transition hover:bg-gold"
+        >
+          Empezar por el paso 1 →
+        </a>
       </div>
     </section>
   );

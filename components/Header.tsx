@@ -19,8 +19,13 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-3 z-50 px-3 md:top-5 md:px-6">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-ink/80 px-4 shadow-2xl backdrop-blur-md md:h-16 md:px-5">
-        <a href="/" className="text-[17px] font-bold tracking-tight text-white">
-          Nicolás Moya<span className="text-gold">.</span>
+        <a href="/" className="flex items-baseline gap-2.5">
+          <span className="text-[17px] font-bold tracking-tight text-white">
+            Nicolás Moya<span className="text-gold">.</span>
+          </span>
+          <span className="hidden font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-white/55 sm:inline">
+            Webs que venden — Tucumán
+          </span>
         </a>
         <nav className="hidden items-center gap-7 text-sm font-medium text-white/65 lg:flex">
           {links.map((l) => (
