@@ -1,21 +1,28 @@
+"use client";
+
 import Link from "next/link";
 import { trabajos } from "../lib/trabajos";
+import { strings, useLang } from "../lib/i18n";
 
 export default function Cases() {
+  const { lang } = useLang();
+  const t = strings[lang];
+  const data = t.trabajosData;
+
   return (
     <section id="proyectos" className="border-y border-white/10 bg-ink-2">
       <div className="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
         <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-white md:text-5xl">
-          En qué estoy trabajando.
+          {t.cases.title}
         </h2>
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
-          {trabajos.map((t) => (
+          {trabajos.map((job) => (
             <Link
-              key={t.slug}
-              href={`/trabajos/${t.slug}`}
+              key={job.slug}
+              href={`/trabajos/${job.slug}`}
               className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-xl border border-white/10"
             >
-              {t.fondoVideo ? (
+              {job.fondoVideo ? (
                 <video
                   aria-hidden
                   autoPlay
@@ -23,14 +30,14 @@ export default function Cases() {
                   loop
                   playsInline
                   preload="metadata"
-                  poster={t.fondoPoster ?? t.fondo}
+                  poster={job.fondoPoster ?? job.fondo}
                   className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 >
-                  <source src={t.fondoVideo} type="video/mp4" />
+                  <source src={job.fondoVideo} type="video/mp4" />
                 </video>
               ) : (
                 <img
-                  src={t.fondo}
+                  src={job.fondo}
                   alt=""
                   aria-hidden
                   loading="lazy"
@@ -43,13 +50,13 @@ export default function Cases() {
               />
               <div className="relative p-7">
                 <h3 className="text-2xl font-bold tracking-tight text-white">
-                  {t.nombre}
+                  {job.nombre}
                 </h3>
                 <p className="mt-1.5 text-sm leading-snug text-white/65">
-                  {t.tagline}
+                  {data[job.slug]?.tagline ?? job.tagline}
                 </p>
                 <span className="mt-4 inline-block text-sm font-semibold text-gold">
-                  Ver proyecto →
+                  {t.cases.see}
                 </span>
               </div>
             </Link>

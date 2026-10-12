@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "../lib/i18n";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,7 +33,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es" className={`${inter.variable} ${jbmono.variable}`}>
-      <body>{children}</body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var l=localStorage.getItem('lang');if(l==='en'||l==='es'){document.documentElement.lang=l;}}catch(e){}`,
+          }}
+        />
+      </head>
+      <body>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

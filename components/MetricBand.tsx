@@ -1,21 +1,24 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { strings, useLang } from "../lib/i18n";
 
-const metrics = [
-  { value: 243, decimals: 0, suffix: "", label: "productos activos en tienda real" },
-  { value: 201, decimals: 0, suffix: "", label: "seguidores gestionados con CRM y ventas" },
-  { value: 3.88, decimals: 2, suffix: "%", label: "engagement real del negocio" },
+const values = [
+  { value: 243, decimals: 0, suffix: "" },
+  { value: 201, decimals: 0, suffix: "" },
+  { value: 3.88, decimals: 2, suffix: "%" },
 ];
 
 function CountUp({
   value,
   decimals,
   suffix,
+  sep,
 }: {
   value: number;
   decimals: number;
   suffix: string;
+  sep: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [n, setN] = useState(0);
@@ -56,13 +59,16 @@ function CountUp({
 
   const text =
     decimals > 0
-      ? n.toFixed(decimals).replace(".", ",") + suffix
+      ? n.toFixed(decimals).replace(".", sep) + suffix
       : Math.round(n).toString() + suffix;
 
   return <span ref={ref}>{text}</span>;
 }
 
 export default function MetricBand() {
+  const { lang } = useLang();
+  const t = strings[lang].metrics;
+
   return (
     <section className="relative overflow-hidden border-y border-white/10 bg-ink">
       <video
@@ -72,28 +78,29 @@ export default function MetricBand() {
         loop
         playsInline
         preload="none"
-        poster="/hero-oficina2-poster.jpg"
+        poster="/hero-noche-poster.jpg"
         className="absolute inset-0 hidden h-full w-full object-cover opacity-25 md:block"
       >
-        <source src="/hero-oficina2.mp4" type="video/mp4" />
+        <source src="/hero-noche.mp4" type="video/mp4" />
       </video>
       <div aria-hidden className="absolute inset-0 bg-ink/70" />
       <div className="relative mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
         <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-white md:text-5xl">
-          Lo que ya está funcionando.
+          {t.title}
         </h2>
         <div className="mt-12 grid grid-cols-1 gap-10 border-t border-white/10 pt-10 sm:grid-cols-3">
-          {metrics.map((m) => (
-            <div key={m.label}>
+          {values.map((m, i) => (
+            <div key={t.items[i]}>
               <p className="text-5xl font-extrabold tracking-tight text-gold md:text-6xl">
                 <CountUp
                   value={m.value}
                   decimals={m.decimals}
                   suffix={m.suffix}
+                  sep={t.decimalSep}
                 />
               </p>
               <p className="mt-2 max-w-[220px] text-sm leading-snug text-white/55">
-                {m.label}
+                {t.items[i]}
               </p>
             </div>
           ))}
