@@ -82,12 +82,12 @@ export default function FinalCta() {
               return (
                 <a
                   key={s.name}
-                  href={waLink(t.services.waService(name, s.priceFrom))}
+                  href={waLink(t.services.waService(name))}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-fit transition hover:text-gold"
                 >
-                  {name} — {t.services.from} {s.priceFrom}
+                  {name}
                 </a>
               );
             })}
@@ -109,7 +109,7 @@ export default function FinalCta() {
         </div>
         <div className="border-t border-white/10">
           <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-5 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between md:px-6">
-            <p>© 2026 Nicolás Moya — San Miguel de Tucumán, Argentina</p>
+            <p>© 2026 Nicolás Moya — Argentina</p>
             <p>{t.footer.bottom2}</p>
           </div>
         </div>

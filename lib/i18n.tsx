@@ -79,7 +79,7 @@ export function LanguageToggle() {
 const es = {
   nav: {
     tag: "Webs que venden",
-    links: ["Inicio", "Proyectos", "Servicios", "Precios", "Contacto"],
+    links: ["Inicio", "Proyectos", "Servicios", "Paquetes", "Contacto"],
     quote: "Pedir presupuesto",
     quoteShort: "Presupuesto",
     hrefs: ["/#inicio", "/#proyectos", "/#servicios", "/#precios", "/#contacto"],
@@ -95,7 +95,7 @@ const es = {
     seeWork: "Ver trabajos",
     trust: [
       { metric: "En producción", label: "Tienda real con clientes" },
-      { metric: "CI + backups", label: "Datos a salvo" },
+      { metric: "Siempre protegido", label: "Tu página a salvo" },
       { metric: "+300 productos", label: "Catálogo activo hoy" },
       { metric: "Trato directo", label: "Sin intermediarios" },
     ],
@@ -122,7 +122,7 @@ const es = {
       },
       {
         title: "Tu catálogo es un PDF viejo",
-        text: "Fotos sueltas, precios desactualizados y cero forma de pedir. El cliente se cansa y se va.",
+        text: "Fotos sueltas, información desactualizada y cero forma de pedir. El cliente se cansa y se va.",
       },
       {
         title: "Dependés del boca en boca",
@@ -139,7 +139,7 @@ const es = {
       {
         paso: "Paso 1",
         title: "Charlamos de tu negocio",
-        text: "Me contás qué vendés, cómo trabajás hoy y qué te frena. Te digo qué te conviene, cuánto sale y en cuánto tiempo lo tenés.",
+        text: "Me contás qué vendés, cómo trabajás hoy y qué te frena. Te digo qué te conviene y en cuánto tiempo lo tenés.",
         meta: "Sin compromiso",
       },
       {
@@ -179,7 +179,7 @@ const es = {
         outcome: "Tu catálogo siempre actualizado, sin PDFs viejos.",
         points: [
           "Menúes y catálogos digitales con QR",
-          "Panel para manejar stock y precios",
+          "Vos manejás stock y precios",
           "Pedidos ordenados por WhatsApp",
         ],
       },
@@ -187,22 +187,22 @@ const es = {
         outcome: "Tu local abierto 24/7: vende mientras descansás.",
         points: [
           "Tienda completa con pagos",
-          "Panel de administración y reportes",
-          "Backups automáticos y despliegue profesional",
+          "Tablero con tus ventas y reportes",
+          "Copias de seguridad automáticas y publicación profesional",
         ],
       },
     } as Record<string, { outcome: string; points: string[] }>,
     cta: "Consultar este servicio",
-    waService: (name: string, price: string) =>
-      `Hola Nicolás, me interesa el servicio ${name} (desde ${price}). ¿Me pasás presupuesto?`,
+    waService: (name: string) =>
+      `Hola Nicolás, me interesa el servicio ${name}. ¿Me pasás presupuesto?`,
   },
   cases: {
     title: "En qué estoy trabajando.",
     see: "Ver proyecto →",
   },
   pricing: {
-    title: "Precios de frente, sin letra chica.",
-    sub: "El precio final depende del alcance y se define en el presupuesto sin compromiso. Sin sorpresas, sin letra chica.",
+    title: "Un paquete para cada momento de tu negocio.",
+    sub: "Contame qué vendés y te digo cuál te conviene. Sin compromiso.",
     from: "Desde",
     times: {
       "Landing Page": "Entrega en días",
@@ -210,9 +210,9 @@ const es = {
       "E-commerce Premium": "Entrega en 3–6 semanas",
     } as Record<string, string>,
     cta: "Pedir presupuesto",
-    waService: (name: string, price: string) =>
-      `Hola Nicolás, quiero presupuesto del servicio ${name} (desde ${price}).`,
-    note: "Forma de pago: 50% al confirmar y 50% al entregar. Soporte de 30 días incluido en todos los planes.",
+    waService: (name: string) =>
+      `Hola Nicolás, me interesa el paquete ${name}. ¿Me pasás presupuesto?`,
+    note: "Soporte de 30 días incluido en todos los paquetes.",
   },
   faq: {
     title: "Sacate las dudas.",
@@ -222,16 +222,16 @@ const es = {
         a: "Una landing en días, un sitio con catálogo en 1–2 semanas y una tienda completa en 3–6 semanas. Te doy fecha concreta en el presupuesto.",
       },
       {
-        q: "¿Cómo se paga?",
-        a: "50% al confirmar el trabajo y 50% al entregar. Precios en USD al equivalente del día, sin sorpresas.",
+        q: "¿Cómo arrancamos?",
+        a: "Me escribís por WhatsApp, charlamos de tu negocio y te mando una propuesta clara. Sin compromiso.",
       },
       {
         q: "¿Qué necesitás de mi parte?",
-        a: "Lo básico: nombre del negocio, fotos (o las armamos juntos), precios y tu WhatsApp. Del resto me encargo yo.",
+        a: "Lo básico: nombre del negocio, fotos (o las armamos juntos) y tu WhatsApp. Del resto me encargo yo.",
       },
       {
         q: "¿Y si ya tengo una página vieja?",
-        a: "La audito gratis: te digo qué sirve, qué frena ventas y cuánto sale arreglarla o hacerla de nuevo. Sin compromiso.",
+        a: "La reviso gratis: te digo qué sirve, qué frena ventas y cómo lo resolvemos. Sin compromiso.",
       },
       {
         q: "¿Hay soporte después de entregar?",
@@ -241,7 +241,7 @@ const es = {
   },
   contact: {
     title: "Hablemos de tu negocio.",
-    text: "Contame qué vendés y te digo qué te conviene, cuánto sale y en cuánto tiempo lo tenés. Te respondo yo personalmente, sin bots ni formularios eternos.",
+    text: "Contame qué vendés y te digo qué te conviene y en cuánto tiempo lo tenés. Te respondo yo personalmente, sin bots ni formularios eternos.",
     wa: "Hola Nicolás, estoy listo para llevar mi negocio al siguiente nivel. ¿Hablamos?",
     ctaWa: "Hablar por WhatsApp →",
     ctaWork: "Ver trabajos",
@@ -254,7 +254,7 @@ const es = {
     sections: "Secciones",
     services: "Servicios",
     direct: "Contacto directo",
-    links: ["Servicios", "Trabajos", "Precios", "Preguntas"] as string[],
+    links: ["Servicios", "Trabajos", "Paquetes", "Preguntas"] as string[],
     waCta: "Escribime por WhatsApp →",
     waMsg: "Hola Nicolás, quiero un presupuesto sin compromiso para mi negocio.",
     bottom2: "Sitios web que venden.",
@@ -268,17 +268,17 @@ const es = {
     importexpress: {
       tagline: "Tienda online que vende todos los días.",
       descripcion:
-        "E-commerce real en producción para un negocio de importación: catálogo con cientos de productos, pedidos ordenados y panel de administración.",
+        "E-commerce real en producción para un negocio de importación: catálogo con cientos de productos, pedidos ordenados y panel de control.",
       puntos: [
         "Tienda online funcionando con clientes reales",
-        "Catálogo, pedidos y panel de administración",
-        "Calidad profesional: tests automáticos y copias de seguridad",
+        "Catálogo, pedidos y panel de control",
+        "Calidad profesional: revisado y con copias de seguridad",
       ],
       etiqueta: "Cliente en producción",
       ctaMsg: "Hola Nicolás, quiero algo como Lo Pedís, Lo Tenes para mi negocio.",
       capturas: [
         { alt: "Catálogo web de Lo Pedís, Lo Tenes", titulo: "Catálogo web — vista inicial" },
-        { alt: "Dashboard del panel de administración de Lo Pedís, Lo Tenes", titulo: "Panel admin — dashboard" },
+        { alt: "Panel de control de Lo Pedís, Lo Tenes", titulo: "Panel de control" },
       ],
     },
     brinines: {
@@ -297,9 +297,9 @@ const es = {
       ],
     },
     hoteleria: {
-      tagline: "Reservas directas para alojamientos de los valles.",
+      tagline: "Reservas directas para alojamientos turísticos.",
       descripcion:
-        "Propuesta para hoteles y alojamientos turísticos de Tafí, El Mollar, San Javier y Amaicha: reservas directas por WhatsApp, sin comisiones ni intermediarios.",
+        "Propuesta para hoteles y alojamientos turísticos: reservas directas por WhatsApp, sin comisiones ni intermediarios.",
       puntos: [
         "Reservas directas por WhatsApp, sin comisiones",
         "Fichas por habitación con galería",
@@ -330,7 +330,7 @@ export type Dict = typeof es;
 const en: Dict = {
   nav: {
     tag: "Websites that sell",
-    links: ["Home", "Projects", "Services", "Pricing", "Contact"],
+    links: ["Home", "Projects", "Services", "Packages", "Contact"],
     quote: "Get a quote",
     quoteShort: "Quote",
     hrefs: ["/#inicio", "/#proyectos", "/#servicios", "/#precios", "/#contacto"],
@@ -346,7 +346,7 @@ const en: Dict = {
     seeWork: "See work",
     trust: [
       { metric: "In production", label: "Real store with customers" },
-      { metric: "CI + backups", label: "Data kept safe" },
+      { metric: "Always protected", label: "Your site kept safe" },
       { metric: "+300 products", label: "Active catalog today" },
       { metric: "Direct deal", label: "No middlemen" },
     ],
@@ -373,7 +373,7 @@ const en: Dict = {
       },
       {
         title: "Your catalog is an old PDF",
-        text: "Loose photos, outdated prices and no way to order. Customers get tired and leave.",
+        text: "Loose photos, outdated info and no way to order. Customers get tired and leave.",
       },
       {
         title: "Relying on word of mouth",
@@ -390,7 +390,7 @@ const en: Dict = {
       {
         paso: "Step 1",
         title: "Let's talk about your business",
-        text: "You tell me what you sell, how you work today and what's holding you back. I tell you what suits you, what it costs and how fast you get it.",
+        text: "You tell me what you sell, how you work today and what's holding you back. I tell you what suits you and how fast you get it.",
         meta: "No commitment",
       },
       {
@@ -430,7 +430,7 @@ const en: Dict = {
         outcome: "Your catalog always updated, no old PDFs.",
         points: [
           "Digital menus and catalogs with QR",
-          "Panel to manage stock and prices",
+          "You manage stock and prices",
           "Orders organized via WhatsApp",
         ],
       },
@@ -438,22 +438,22 @@ const en: Dict = {
         outcome: "Your shop open 24/7: selling while you rest.",
         points: [
           "Full store with payments",
-          "Admin panel and reports",
-          "Automatic backups and professional deploys",
+          "Dashboard with your sales and reports",
+          "Automatic backups and professional publishing",
         ],
       },
     } as Record<string, { outcome: string; points: string[] }>,
     cta: "Ask about this service",
-    waService: (name: string, price: string) =>
-      `Hi Nicolás, I'm interested in ${name} (from ${price}). Can you quote me?`,
+    waService: (name: string) =>
+      `Hi Nicolás, I'm interested in ${name}. Can you quote me?`,
   },
   cases: {
     title: "What I'm working on.",
     see: "See project →",
   },
   pricing: {
-    title: "Upfront prices, no fine print.",
-    sub: "Final price depends on scope and is set in the no-commitment quote. No surprises, no fine print.",
+    title: "A package for every stage of your business.",
+    sub: "Tell me what you sell and I'll tell you which one suits you. No commitment.",
     from: "From",
     times: {
       "Landing Page": "Delivery in days",
@@ -461,9 +461,9 @@ const en: Dict = {
       "E-commerce Premium": "Delivery in 3–6 weeks",
     } as Record<string, string>,
     cta: "Get a quote",
-    waService: (name: string, price: string) =>
-      `Hi Nicolás, I want a quote for ${name} (from ${price}).`,
-    note: "Payment: 50% on confirmation and 50% on delivery. 30 days of support included in every plan.",
+    waService: (name: string) =>
+      `Hi Nicolás, I'm interested in the ${name} package. Can you quote me?`,
+    note: "30 days of support included in every package.",
   },
   faq: {
     title: "Questions, answered.",
@@ -473,16 +473,16 @@ const en: Dict = {
         a: "A landing in days, a catalog site in 1–2 weeks and a full store in 3–6 weeks. I give you a firm date in the quote.",
       },
       {
-        q: "How do payments work?",
-        a: "50% when confirming the job and 50% on delivery. Prices in USD at the day's rate, no surprises.",
+        q: "How do we start?",
+        a: "Message me on WhatsApp, we chat about your business and I send you a clear proposal. No commitment.",
       },
       {
         q: "What do you need from me?",
-        a: "The basics: business name, photos (or we put them together), prices and your WhatsApp. I handle the rest.",
+        a: "The basics: business name, photos (or we put them together) and your WhatsApp. I handle the rest.",
       },
       {
         q: "What if I already have an old page?",
-        a: "I audit it free: I tell you what works, what blocks sales and what fixing or redoing it costs. No commitment.",
+        a: "I check it free: I tell you what works, what blocks sales and how we fix it. No commitment.",
       },
       {
         q: "Is there support after delivery?",
@@ -492,7 +492,7 @@ const en: Dict = {
   },
   contact: {
     title: "Let's talk about your business.",
-    text: "Tell me what you sell and I'll tell you what suits you, what it costs and how fast you get it. I reply personally — no bots, no endless forms.",
+    text: "Tell me what you sell and I'll tell you what suits you and how fast you get it. I reply personally — no bots, no endless forms.",
     wa: "Hi Nicolás, I'm ready to take my business to the next level. Shall we talk?",
     ctaWa: "Chat on WhatsApp →",
     ctaWork: "See work",
@@ -505,7 +505,7 @@ const en: Dict = {
     sections: "Sections",
     services: "Services",
     direct: "Direct contact",
-    links: ["Services", "Work", "Pricing", "FAQ"] as string[],
+    links: ["Services", "Work", "Packages", "FAQ"] as string[],
     waCta: "Write me on WhatsApp →",
     waMsg: "Hi Nicolás, I want a no-commitment quote for my business.",
     bottom2: "Websites that sell.",
@@ -519,17 +519,17 @@ const en: Dict = {
     importexpress: {
       tagline: "Online store selling every day.",
       descripcion:
-        "Real e-commerce in production for an import business: catalog with hundreds of products, organized orders and admin panel.",
+        "Real e-commerce in production for an import business: catalog with hundreds of products, organized orders and control panel.",
       puntos: [
         "Online store running with real customers",
-        "Catalog, orders and admin panel",
-        "Professional quality: automatic tests and backups",
+        "Catalog, orders and control panel",
+        "Professional quality: checked and backed up",
       ],
       etiqueta: "Live client",
       ctaMsg: "Hi Nicolás, I want something like Lo Pedís, Lo Tenes for my business.",
       capturas: [
         { alt: "Lo Pedís, Lo Tenes web catalog", titulo: "Web catalog — first view" },
-        { alt: "Lo Pedís, Lo Tenes admin panel dashboard", titulo: "Admin panel — dashboard" },
+        { alt: "Lo Pedís, Lo Tenes control panel", titulo: "Control panel" },
       ],
     },
     brinines: {
@@ -548,9 +548,9 @@ const en: Dict = {
       ],
     },
     hoteleria: {
-      tagline: "Direct bookings for valley rentals.",
+      tagline: "Direct bookings for tourist rentals.",
       descripcion:
-        "Proposal for hotels and tourist rentals in Tafí, El Mollar, San Javier and Amaicha: direct bookings via WhatsApp, no commissions, no middlemen.",
+        "Proposal for hotels and tourist rentals: direct bookings via WhatsApp, no commissions, no middlemen.",
       puntos: [
         "Direct bookings via WhatsApp, no commissions",
         "Room pages with gallery",

@@ -29,11 +29,11 @@ export const trabajos: Trabajo[] = [
     nombre: "Lo Pedís, Lo Tenes",
     tagline: "Tienda online que vende todos los días.",
     descripcion:
-      "E-commerce real en producción para un negocio de importación: catálogo con cientos de productos, pedidos ordenados y panel de administración.",
+      "E-commerce real en producción para un negocio de importación: catálogo con cientos de productos, pedidos ordenados y panel de control.",
     puntos: [
       "Tienda online funcionando con clientes reales",
-      "Catálogo, pedidos y panel de administración",
-      "Calidad profesional: tests automáticos y copias de seguridad",
+      "Catálogo, pedidos y panel de control",
+      "Calidad profesional: revisado y con copias de seguridad",
     ],
     fondo: "/trabajos/bg-ecommerce.jpg",
     fondoAlt: "Operativa portuaria nocturna vista con dron",
@@ -47,8 +47,8 @@ export const trabajos: Trabajo[] = [
       },
       {
         src: "/trabajos/cap-ie-admin.jpg",
-        alt: "Dashboard del panel de administración de Lo Pedís, Lo Tenes",
-        titulo: "Panel admin — dashboard",
+        alt: "Panel de control de Lo Pedís, Lo Tenes",
+        titulo: "Panel de control",
       },
     ],
     urlDeploy: "https://lopedis-lotenes.up.railway.app",
@@ -86,9 +86,9 @@ export const trabajos: Trabajo[] = [
   {
     slug: "hoteleria",
     nombre: "Hotelería",
-    tagline: "Reservas directas para alojamientos de los valles.",
+    tagline: "Reservas directas para alojamientos turísticos.",
     descripcion:
-      "Propuesta para hoteles y alojamientos turísticos de Tafí, El Mollar, San Javier y Amaicha: reservas directas por WhatsApp, sin comisiones ni intermediarios.",
+      "Propuesta para hoteles y alojamientos turísticos: reservas directas por WhatsApp, sin comisiones ni intermediarios.",
     puntos: [
       "Reservas directas por WhatsApp, sin comisiones",
       "Fichas por habitación con galería",

@@ -25,12 +25,6 @@ export default function Services() {
                 <h3 className="text-xl font-bold tracking-tight text-white">
                   {name}
                 </h3>
-                <p className="mt-4 text-4xl font-extrabold tracking-tight text-white">
-                  <span className="block font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-white/45">
-                    {t.from}
-                  </span>
-                  {s.priceFrom}
-                </p>
                 <p className="mt-4 font-medium leading-snug text-white/85">
                   {d.outcome}
                 </p>
@@ -43,7 +37,7 @@ export default function Services() {
                   ))}
                 </ul>
                 <a
-                  href={waLink(t.waService(name, s.priceFrom))}
+                  href={waLink(t.waService(name))}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-shine mt-7 block rounded-lg bg-gold px-5 py-3.5 text-center text-sm font-bold text-ink transition hover:brightness-110"

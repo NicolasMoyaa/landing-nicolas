@@ -6,7 +6,7 @@ import { strings, useLang } from "../lib/i18n";
 export default function Pricing() {
   const { lang } = useLang();
   const t = strings[lang].pricing;
-  const names = strings[lang].services.names;
+  const svc = strings[lang].services;
 
   return (
     <section id="precios" className="bg-ink">
@@ -19,7 +19,8 @@ export default function Pricing() {
         </p>
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
           {services.map((s) => {
-            const name = names[s.name] ?? s.name;
+            const name = svc.names[s.name] ?? s.name;
+            const d = svc.detail[s.name] ?? { outcome: "", points: [] };
             return (
               <article
                 key={s.name}
@@ -28,17 +29,22 @@ export default function Pricing() {
                 <h3 className="text-lg font-bold tracking-tight text-white">
                   {name}
                 </h3>
-                <p className="mt-4 text-4xl font-extrabold tracking-tight text-white">
-                  <span className="block font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-white/45">
-                    {t.from}
-                  </span>
-                  {s.priceFrom}
+                <p className="mt-4 font-medium leading-snug text-white/85">
+                  {d.outcome}
                 </p>
+                <ul className="mt-5 flex-1 divide-y divide-white/10 border-y border-white/10 text-sm text-white/65">
+                  {d.points.map((pt) => (
+                    <li key={pt} className="flex gap-2.5 py-2.5">
+                      <span className="font-bold text-gold">✓</span>
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
                 <p className="mt-3 text-sm font-medium text-white/50">
                   {t.times[s.name] ?? ""}
                 </p>
                 <a
-                  href={waLink(t.waService(name, s.priceFrom))}
+                  href={waLink(t.waService(name))}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-shine btn-shine-fast mt-7 block rounded-lg bg-brand px-5 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-brand-deep"

@@ -85,7 +85,7 @@ export default function TrabajoContent({ slug }: { slug: string }) {
                 href={base.urlDeploy}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg bg-gold px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-white"
+                className="btn-shine btn-shine-fast rounded-lg bg-gold px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-white"
               >
                 {t.trabajo.visit}
               </a>
