@@ -33,13 +33,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es" className={`${inter.variable} ${jbmono.variable}`}>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var l=localStorage.getItem('lang');if(l==='en'||l==='es'){document.documentElement.lang=l;}}catch(e){}`,
-          }}
-        />
-      </head>
       <body>
         <LanguageProvider>{children}</LanguageProvider>
       </body>

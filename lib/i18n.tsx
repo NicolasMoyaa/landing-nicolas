@@ -16,12 +16,18 @@ const LangCtx = createContext<{ lang: Lang; setLang: (l: Lang) => void }>({
 });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(() =>
-    typeof window !== "undefined" &&
-    window.localStorage.getItem("lang") === "en"
-      ? "en"
-      : "es"
-  );
+  // Siempre hidrata en ES (igual que el SSR) y aplica lo guardado tras montar:
+  // leer localStorage en el init rompe la hidratación (React #418) en visitas EN.
+  const [lang, setLangState] = useState<Lang>("es");
+
+  useEffect(() => {
+    try {
+      const saved = window.localStorage.getItem("lang");
+      if (saved === "en" || saved === "es") setLangState(saved);
+    } catch {
+      /* almacenamiento no disponible */
+    }
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = lang;
