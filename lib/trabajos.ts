@@ -47,8 +47,8 @@ export const trabajos: Trabajo[] = [
       },
       {
         src: "/trabajos/cap-ie-admin.jpg",
-        alt: "Acceso al panel de administración de Lo Pedís, Lo Tenes",
-        titulo: "Panel admin — acceso",
+        alt: "Dashboard del panel de administración de Lo Pedís, Lo Tenes",
+        titulo: "Panel admin — dashboard",
       },
     ],
     urlDeploy: "https://lopedis-lotenes.up.railway.app",
