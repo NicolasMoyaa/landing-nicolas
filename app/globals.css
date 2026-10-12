@@ -79,6 +79,15 @@ details[open] .faq-plus {
     transparent 90%
   );
 }
+/* Destello blanco sobre botón naranja (hipótesis L-008: naranja serio + hover blanco) */
+.btn-shine-on-orange::after {
+  background: linear-gradient(
+    100deg,
+    transparent 5%,
+    rgba(255, 255, 255, 0.9),
+    transparent 95%
+  );
+}
 @keyframes shine-sweep {
   0%,
   55% {

@@ -19,12 +19,12 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-3 z-50 px-3 md:top-5 md:px-6">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-ink/80 px-4 shadow-2xl backdrop-blur-md md:h-16 md:px-5">
-        <a href="/" className="flex items-baseline gap-2.5">
-          <span className="text-[17px] font-bold tracking-tight text-white">
+        <a href="/" className="flex flex-col leading-none">
+          <span className="whitespace-nowrap text-[17px] font-bold leading-tight tracking-tight text-white">
             Nicolás Moya<span className="text-gold">.</span>
           </span>
-          <span className="hidden font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-white/55 sm:inline">
-            Webs que venden — Tucumán
+          <span className="hidden bg-gradient-to-t from-white/60 via-white/90 to-white bg-clip-text text-center font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-transparent sm:inline">
+            Webs que venden
           </span>
         </a>
         <nav className="hidden items-center gap-7 text-sm font-medium text-white/65 lg:flex">
@@ -39,9 +39,10 @@ export default function Header() {
             href={WA_GENERAL()}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-gold"
+            className="rounded-xl bg-white px-3 py-2.5 text-sm font-semibold text-ink transition hover:bg-gold sm:px-4"
           >
-            Pedir presupuesto
+            <span className="sm:hidden">Presupuesto</span>
+            <span className="hidden sm:inline">Pedir presupuesto</span>
           </a>
           <details className="relative lg:hidden">
             <summary className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl border border-white/20 text-white">

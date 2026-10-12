@@ -54,7 +54,7 @@ export default function Hero() {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-shine btn-shine-gold btn-shine-fast rounded-lg bg-white px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-gold"
+            className="btn-shine btn-shine-on-orange btn-shine-fast rounded-lg bg-[#EA580C] px-8 py-4 text-center text-base font-semibold text-white transition hover:bg-white hover:text-ink"
           >
             Pedir presupuesto por WhatsApp →
           </a>

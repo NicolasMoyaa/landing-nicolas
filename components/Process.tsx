@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import { waLink } from "../lib/site";
 
 const steps = [
@@ -32,27 +33,26 @@ export default function Process() {
           Sin reuniones eternas ni tecnicismos: así avanza tu proyecto, de la
           primera charla a la entrega.
         </p>
-        <ol className="mt-12 border-t border-white/10">
-          {steps.map((s) => (
-            <li
-              key={s.paso}
-              className="grid items-baseline gap-2 border-b border-white/10 py-8 md:grid-cols-[130px_1fr_1.3fr_auto] md:gap-6"
-            >
-              <span className="font-mono text-sm font-medium text-gold">
-                {s.paso}
-              </span>
-              <h3 className="text-xl font-bold tracking-tight text-white md:text-2xl">
-                {s.title}
-              </h3>
-              <p className="max-w-xl leading-relaxed text-white/60">
-                {s.text}
-              </p>
-              <span className="w-fit rounded-full border border-gold/30 px-3.5 py-1.5 text-xs font-semibold text-gold">
-                {s.meta}
-              </span>
-            </li>
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {steps.map((s, i) => (
+            <Reveal key={s.paso} delay={i * 120}>
+              <article className="group h-full rounded-2xl border border-white/10 bg-ink p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/60 hover:shadow-[0_20px_50px_-20px_rgba(255,232,31,0.35)]">
+                <span className="font-mono text-sm font-medium text-gold">
+                  {s.paso}
+                </span>
+                <h3 className="mt-3 text-xl font-bold tracking-tight text-white md:text-2xl">
+                  {s.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-white/60">
+                  {s.text}
+                </p>
+                <span className="mt-5 inline-block rounded-full border border-gold/30 px-3.5 py-1.5 text-xs font-semibold text-gold transition group-hover:border-gold group-hover:bg-gold/10">
+                  {s.meta}
+                </span>
+              </article>
+            </Reveal>
           ))}
-        </ol>
+        </div>
         <a
           href={waLink(
             "Hola Nicolás, quiero arrancar con el paso 1: charlar de mi negocio."
