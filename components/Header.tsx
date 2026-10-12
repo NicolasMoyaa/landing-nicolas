@@ -42,7 +42,7 @@ export default function Header() {
             href={waLink(t.waGeneral)}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-xl bg-white px-3 py-2.5 text-sm font-semibold text-ink transition hover:bg-gold sm:px-4"
+            className="rounded-xl bg-gold px-3 py-2.5 text-sm font-semibold text-ink transition hover:bg-white sm:px-4"
           >
             <span className="sm:hidden">{t.nav.quoteShort}</span>
             <span className="hidden sm:inline">{t.nav.quote}</span>

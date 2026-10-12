@@ -18,13 +18,13 @@ const jbmono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nicolas Moya — Sitios web que venden en Tucuman",
-  description: "Diseño y desarrollo de sitios web, tiendas online y soluciones digitales para negocios de Tucuman, Argentina.",
-  keywords: ["diseño web", "Tucuman", "sitios web", "e-commerce", "desarrollo web"],
+  title: "Nicolas Moya — Sitios web que venden",
+  description: "Diseño y desarrollo de sitios web, tiendas online y soluciones digitales para tiendas, servicios y alojamientos.",
+  keywords: ["diseño web", "sitios web", "e-commerce", "desarrollo web", "tiendas online"],
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "Nicolas Moya — Sitios web que venden en Tucuman",
-    description: "Sitios web y tiendas online para negocios de Tucuman, Argentina.",
+    title: "Nicolas Moya — Sitios web que venden",
+    description: "Sitios web y tiendas online para tiendas, servicios y alojamientos.",
     locale: "es_AR",
     type: "website",
   },

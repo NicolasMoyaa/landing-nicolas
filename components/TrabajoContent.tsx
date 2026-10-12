@@ -56,21 +56,23 @@ export default function TrabajoContent({ slug }: { slug: string }) {
           className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"
         />
         <div className="relative mx-auto w-full max-w-6xl px-4 pb-12 pt-40 md:px-6">
-          <Link
-            href="/#proyectos"
-            className="text-sm font-semibold text-white/60 transition hover:text-gold"
-          >
-            {t.trabajo.back}
-          </Link>
-          <span
-            className={`mt-6 inline-block rounded-full border px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.18em] ${
-              base.real
-                ? "border-gold/40 text-gold"
-                : "border-white/25 text-white/60"
-            }`}
-          >
-            {etiqueta}
-          </span>
+          <div className="flex flex-col items-start gap-4">
+            <Link
+              href="/#proyectos"
+              className="text-sm font-semibold text-white/60 transition hover:text-gold"
+            >
+              {t.trabajo.back}
+            </Link>
+            <span
+              className={`inline-block rounded-full border px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.18em] ${
+                base.real
+                  ? "border-gold/40 text-gold"
+                  : "border-white/25 text-white/60"
+              }`}
+            >
+              {etiqueta}
+            </span>
+          </div>
           <h1 className="mt-4 text-5xl font-semibold tracking-[-0.03em] md:text-7xl">
             {nombre}
           </h1>
@@ -83,7 +85,7 @@ export default function TrabajoContent({ slug }: { slug: string }) {
                 href={base.urlDeploy}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg bg-white px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-gold"
+                className="rounded-lg bg-gold px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-white"
               >
                 {t.trabajo.visit}
               </a>

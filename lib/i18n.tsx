@@ -82,7 +82,7 @@ const es = {
   hero: {
     h1a: "Tu negocio vendiendo todos los días,",
     h1b: "incluso cuando vos descansás.",
-    sub: "Sitios rápidos, catálogos digitales y pedidos por WhatsApp para comercios y servicios de Tucumán. Sin vueltas: el cliente entra, entiende y te escribe.",
+    sub: "Sitios rápidos, catálogos digitales y pedidos por WhatsApp para tiendas, servicios y alojamientos. Sin vueltas: el cliente entra, entiende y te escribe.",
     cta: "Pedir presupuesto por WhatsApp →",
     wa: "Hola Nicolás, quiero un presupuesto sin compromiso para mi negocio.",
     strip: "Trabajos reales en producción",
@@ -244,7 +244,7 @@ const es = {
     alt2: "Dueña de negocio revisando pedidos con su tablet",
   },
   footer: {
-    tagline: "Sitios web que venden para negocios de Tucumán, Argentina.",
+    tagline: "Sitios web que venden para tiendas, servicios y alojamientos.",
     sections: "Secciones",
     services: "Servicios",
     direct: "Contacto directo",
@@ -333,7 +333,7 @@ const en: Dict = {
   hero: {
     h1a: "Your business selling every day,",
     h1b: "even while you rest.",
-    sub: "Fast sites, digital catalogs and WhatsApp orders for shops and services in Tucumán. No fluff: customers arrive, understand and message you.",
+    sub: "Fast sites, digital catalogs and WhatsApp orders for shops, services and rentals. No fluff: customers arrive, understand and message you.",
     cta: "Get a WhatsApp quote →",
     wa: "Hi Nicolás, I want a no-commitment quote for my business.",
     strip: "Real work in production",
@@ -495,7 +495,7 @@ const en: Dict = {
     alt2: "Shop owner checking orders on her tablet",
   },
   footer: {
-    tagline: "Websites that sell for businesses in Tucumán, Argentina.",
+    tagline: "Websites that sell for shops, services and rentals.",
     sections: "Sections",
     services: "Services",
     direct: "Direct contact",
