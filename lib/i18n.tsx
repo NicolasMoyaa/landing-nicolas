@@ -96,7 +96,7 @@ const es = {
     trust: [
       { metric: "En producción", label: "Tienda real con clientes" },
       { metric: "CI + backups", label: "Datos a salvo" },
-      { metric: "243 productos", label: "Catálogo activo hoy" },
+      { metric: "+300 productos", label: "Catálogo activo hoy" },
       { metric: "Trato directo", label: "Sin intermediarios" },
     ],
   },
@@ -347,7 +347,7 @@ const en: Dict = {
     trust: [
       { metric: "In production", label: "Real store with customers" },
       { metric: "CI + backups", label: "Data kept safe" },
-      { metric: "243 products", label: "Active catalog today" },
+      { metric: "+300 products", label: "Active catalog today" },
       { metric: "Direct deal", label: "No middlemen" },
     ],
   },

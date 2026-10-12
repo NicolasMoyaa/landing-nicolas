@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { strings, useLang } from "../lib/i18n";
 
 const values = [
-  { value: 243, decimals: 0, suffix: "" },
-  { value: 201, decimals: 0, suffix: "" },
-  { value: 3.88, decimals: 2, suffix: "%" },
+  { value: 300, decimals: 0, suffix: "", prefix: "+" },
+  { value: 201, decimals: 0, suffix: "", prefix: "" },
+  { value: 3.88, decimals: 2, suffix: "%", prefix: "" },
 ];
 
 function CountUp({
@@ -14,11 +14,13 @@ function CountUp({
   decimals,
   suffix,
   sep,
+  prefix,
 }: {
   value: number;
   decimals: number;
   suffix: string;
   sep: string;
+  prefix: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [n, setN] = useState(0);
@@ -62,7 +64,7 @@ function CountUp({
       ? n.toFixed(decimals).replace(".", sep) + suffix
       : Math.round(n).toString() + suffix;
 
-  return <span ref={ref}>{text}</span>;
+  return <span ref={ref}>{prefix}{text}</span>;
 }
 
 export default function MetricBand() {
@@ -97,6 +99,7 @@ export default function MetricBand() {
                   decimals={m.decimals}
                   suffix={m.suffix}
                   sep={t.decimalSep}
+                  prefix={m.prefix}
                 />
               </p>
               <p className="mt-2 max-w-[220px] text-sm leading-snug text-white/55">
