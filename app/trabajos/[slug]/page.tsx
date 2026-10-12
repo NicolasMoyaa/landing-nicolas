@@ -36,12 +36,27 @@ export default async function TrabajoPage({
     <main className="bg-ink text-white">
       <Header />
       <section className="relative flex min-h-[70svh] flex-col justify-end overflow-hidden">
-        <img
-          src={t.fondo}
-          alt={t.fondoAlt}
-          fetchPriority="high"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        {t.fondoVideo ? (
+          <video
+            aria-hidden
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={t.fondoPoster ?? t.fondo}
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src={t.fondoVideo} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={t.fondo}
+            alt={t.fondoAlt}
+            fetchPriority="high"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
         <div
           aria-hidden
           className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"
@@ -96,21 +111,21 @@ export default async function TrabajoPage({
           <p className="max-w-3xl text-xl leading-relaxed text-white/75 md:text-2xl">
             {t.descripcion}
           </p>
-          {t.captura && (
-            <figure className="mt-12">
+          {t.capturas?.map((c) => (
+            <figure key={c.src} className="mt-12">
               <div className="overflow-hidden rounded-xl border border-white/10">
                 <img
-                  src={t.captura}
-                  alt={t.capturaAlt ?? `Vista principal de ${t.nombre}`}
+                  src={c.src}
+                  alt={c.alt}
                   loading="lazy"
                   className="w-full object-cover"
                 />
               </div>
               <figcaption className="mt-3 text-sm text-white/40">
-                Vista principal — {t.nombre}
+                {c.titulo}
               </figcaption>
             </figure>
-          )}
+          ))}
           <ul className="mt-12 grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2">
             {t.puntos.map((p) => (
               <li key={p} className="flex gap-3 bg-ink p-6 text-[15px] text-white/80">

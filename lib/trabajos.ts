@@ -1,5 +1,11 @@
 import { waLink } from "./site";
 
+export type Captura = {
+  src: string;
+  alt: string;
+  titulo: string;
+};
+
 export type Trabajo = {
   slug: string;
   nombre: string;
@@ -8,8 +14,9 @@ export type Trabajo = {
   puntos: string[];
   fondo: string;
   fondoAlt: string;
-  captura?: string;
-  capturaAlt?: string;
+  fondoVideo?: string;
+  fondoPoster?: string;
+  capturas?: Captura[];
   urlDeploy?: string;
   etiqueta: string;
   real: boolean;
@@ -29,10 +36,22 @@ export const trabajos: Trabajo[] = [
       "Calidad profesional: tests automáticos y copias de seguridad",
     ],
     fondo: "/trabajos/bg-ecommerce.jpg",
-    fondoAlt: "Pantalla con tienda online en un local",
-    captura: "/trabajos/cap-importexpress.jpg",
-    capturaAlt: "Vista principal de la tienda ImportExpress",
-    urlDeploy: "https://lopedislotenes.com",
+    fondoAlt: "Operativa portuaria nocturna vista con dron",
+    fondoVideo: "/trabajos/bg-harbor.mp4",
+    fondoPoster: "/trabajos/bg-harbor.jpg",
+    capturas: [
+      {
+        src: "/trabajos/cap-ie-catalogo.jpg",
+        alt: "Catálogo web de ImportExpress",
+        titulo: "Catálogo web — vista inicial",
+      },
+      {
+        src: "/trabajos/cap-ie-admin.jpg",
+        alt: "Acceso al panel de administración de ImportExpress",
+        titulo: "Panel admin — acceso",
+      },
+    ],
+    urlDeploy: "https://lopedis-lotenes.up.railway.app",
     etiqueta: "Cliente en producción",
     real: true,
     ctaMsg: "Hola Nicolás, quiero algo como ImportExpress para mi negocio.",
@@ -49,9 +68,16 @@ export const trabajos: Trabajo[] = [
       "201 seguidores, 5 productos, venta directa sin intermediarios",
     ],
     fondo: "/trabajos/bg-horno.jpg",
-    fondoAlt: "Pan artesanal saliendo del horno",
-    captura: "/trabajos/cap-brinines.jpg",
-    capturaAlt: "Vista principal del CRM de Brinines",
+    fondoAlt: "Porción de budín marmolado artesanal",
+    fondoVideo: "/trabajos/bg-brinines.mp4",
+    fondoPoster: "/trabajos/bg-brinines.jpg",
+    capturas: [
+      {
+        src: "/trabajos/cap-brinines.jpg",
+        alt: "Vista principal del CRM de Brinines",
+        titulo: "Vista principal — Brinines",
+      },
+    ],
     urlDeploy: "https://brinines-crm.vercel.app",
     etiqueta: "Negocio real",
     real: true,
@@ -70,7 +96,17 @@ export const trabajos: Trabajo[] = [
       "Sección para sumar nuevas propiedades",
     ],
     fondo: "/trabajos/bg-montana.jpg",
-    fondoAlt: "Refugio de montaña junto al lago",
+    fondoAlt: "Cielo tormentoso sobre la montaña",
+    fondoVideo: "/trabajos/bg-hotel.mp4",
+    fondoPoster: "/trabajos/bg-hotel.jpg",
+    capturas: [
+      {
+        src: "/trabajos/bg-hotel.jpg",
+        alt: "Concepto visual Hotelería",
+        titulo: "Vista concepto — Hotelería",
+      },
+    ],
+    urlDeploy: "https://landing-nicolas.vercel.app/trabajos/hoteleria",
     etiqueta: "Demo conceptual",
     real: false,
     ctaMsg: "Hola Nicolás, tengo un alojamiento y quiero una página así.",

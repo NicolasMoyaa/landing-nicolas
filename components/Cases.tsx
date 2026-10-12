@@ -15,13 +15,28 @@ export default function Cases() {
               href={`/trabajos/${t.slug}`}
               className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-xl border border-white/10"
             >
-              <img
-                src={t.fondo}
-                alt=""
-                aria-hidden
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
-              />
+              {t.fondoVideo ? (
+                <video
+                  aria-hidden
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster={t.fondoPoster ?? t.fondo}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                >
+                  <source src={t.fondoVideo} type="video/mp4" />
+                </video>
+              ) : (
+                <img
+                  src={t.fondo}
+                  alt=""
+                  aria-hidden
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              )}
               <div
                 aria-hidden
                 className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent"

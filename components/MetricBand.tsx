@@ -72,10 +72,10 @@ export default function MetricBand() {
         loop
         playsInline
         preload="none"
-        poster="/hero-noche-poster.jpg"
+        poster="/hero-oficina-poster.jpg"
         className="absolute inset-0 hidden h-full w-full object-cover opacity-25 md:block"
       >
-        <source src="/hero-noche.mp4" type="video/mp4" />
+        <source src="/hero-oficina.mp4" type="video/mp4" />
       </video>
       <div aria-hidden className="absolute inset-0 bg-ink/70" />
       <div className="relative mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">

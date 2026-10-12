@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative flex min-h-[100svh] flex-col overflow-hidden bg-ink text-white">
       <img
-        src="/hero-noche-poster.jpg"
+        src="/hero-oficina-poster.jpg"
         alt=""
         aria-hidden
         fetchPriority="high"
@@ -24,10 +24,10 @@ export default function Hero() {
         loop
         playsInline
         preload="metadata"
-        poster="/hero-noche-poster.jpg"
+        poster="/hero-oficina-poster.jpg"
         className="absolute inset-0 hidden h-full w-full object-cover md:block"
       >
-        <source src="/hero-noche.mp4" type="video/mp4" />
+        <source src="/hero-oficina.mp4" type="video/mp4" />
       </video>
       <div
         aria-hidden
