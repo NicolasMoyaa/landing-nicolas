@@ -26,7 +26,7 @@ export type Trabajo = {
 export const trabajos: Trabajo[] = [
   {
     slug: "importexpress",
-    nombre: "ImportExpress",
+    nombre: "Lo Pedís, Lo Tenes",
     tagline: "Tienda online que vende todos los días.",
     descripcion:
       "E-commerce real en producción para un negocio de importación: catálogo con cientos de productos, pedidos ordenados y panel de administración.",
@@ -42,19 +42,19 @@ export const trabajos: Trabajo[] = [
     capturas: [
       {
         src: "/trabajos/cap-ie-catalogo.jpg",
-        alt: "Catálogo web de ImportExpress",
+        alt: "Catálogo web de Lo Pedís, Lo Tenes",
         titulo: "Catálogo web — vista inicial",
       },
       {
         src: "/trabajos/cap-ie-admin.jpg",
-        alt: "Acceso al panel de administración de ImportExpress",
+        alt: "Acceso al panel de administración de Lo Pedís, Lo Tenes",
         titulo: "Panel admin — acceso",
       },
     ],
     urlDeploy: "https://lopedis-lotenes.up.railway.app",
     etiqueta: "Cliente en producción",
     real: true,
-    ctaMsg: "Hola Nicolás, quiero algo como ImportExpress para mi negocio.",
+    ctaMsg: "Hola Nicolás, quiero algo como Lo Pedís, Lo Tenes para mi negocio.",
   },
   {
     slug: "brinines",
@@ -96,12 +96,12 @@ export const trabajos: Trabajo[] = [
       "Sección para sumar nuevas propiedades",
     ],
     fondo: "/trabajos/bg-montana.jpg",
-    fondoAlt: "Cielo tormentoso sobre la montaña",
-    fondoVideo: "/trabajos/bg-hotel.mp4",
-    fondoPoster: "/trabajos/bg-hotel.jpg",
+    fondoAlt: "Cabañas entre el bosque vistas con dron",
+    fondoVideo: "/trabajos/bg-cabins.mp4",
+    fondoPoster: "/trabajos/bg-cabins.jpg",
     capturas: [
       {
-        src: "/trabajos/bg-hotel.jpg",
+        src: "/trabajos/bg-cabins.jpg",
         alt: "Concepto visual Hotelería",
         titulo: "Vista concepto — Hotelería",
       },

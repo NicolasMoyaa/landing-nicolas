@@ -39,8 +39,8 @@ export default function FinalCta() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="/contacto-1.jpg"
-              alt="Comerciante atendiendo un pedido por teléfono en su local"
+              src="/contacto-reunion.jpg"
+              alt="Reunión de trabajo con un negocio en una sala moderna"
               loading="lazy"
               className="mt-8 rounded-xl border border-white/10 object-cover"
             />
@@ -59,10 +59,6 @@ export default function FinalCta() {
             <p className="text-base font-bold tracking-tight">Nicolás Moya</p>
             <p className="mt-2 text-sm leading-relaxed text-white/50">
               Sitios web que venden para negocios de Tucumán, Argentina.
-            </p>
-            <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1.5 font-mono text-[11px] text-white/60">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
-              Web en producción
             </p>
           </div>
           <nav className="flex flex-col gap-2.5 text-sm text-white/60">

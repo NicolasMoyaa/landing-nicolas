@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative flex min-h-[100svh] flex-col overflow-hidden bg-ink text-white">
       <img
-        src="/hero-oficina-poster.jpg"
+        src="/hero-oficina2-poster.jpg"
         alt=""
         aria-hidden
         fetchPriority="high"
@@ -24,10 +24,10 @@ export default function Hero() {
         loop
         playsInline
         preload="metadata"
-        poster="/hero-oficina-poster.jpg"
+        poster="/hero-oficina2-poster.jpg"
         className="absolute inset-0 hidden h-full w-full object-cover md:block"
       >
-        <source src="/hero-oficina.mp4" type="video/mp4" />
+        <source src="/hero-oficina2.mp4" type="video/mp4" />
       </video>
       <div
         aria-hidden
@@ -54,7 +54,7 @@ export default function Hero() {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-shine btn-shine-on-orange btn-shine-fast rounded-lg bg-[#EA580C] px-8 py-4 text-center text-base font-semibold text-white transition hover:bg-white hover:text-ink"
+            className="btn-shine btn-shine-fast rounded-lg bg-gold px-8 py-4 text-center text-base font-semibold text-ink transition hover:bg-white"
           >
             Pedir presupuesto por WhatsApp →
           </a>

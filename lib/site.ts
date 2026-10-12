@@ -11,7 +11,7 @@ export const services = [
 ] as const;
 
 export const cases = [
-  { name: "ImportExpress", description: "E-commerce real en produccion con CI y backups." },
+  { name: "Lo Pedís, Lo Tenes", description: "E-commerce real en produccion con CI y backups." },
   { name: "Brinines AI", description: "CRM con 201 seguidores, ER 3.88% y 5 SKUs." },
   { name: "Alquiler temporario turistico Tucuman", description: "DEMO CONCEPTUAL; sin metricas inventadas." },
 ] as const;

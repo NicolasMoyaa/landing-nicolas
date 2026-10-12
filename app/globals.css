@@ -99,7 +99,10 @@ details[open] .faq-plus {
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  /* Sin movimiento: brillo diagonal fijo siempre visible (nunca invisible) */
   .btn-shine::after {
     animation: none;
+    left: 12%;
+    opacity: 0.55;
   }
 }
