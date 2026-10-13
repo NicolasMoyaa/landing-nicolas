@@ -79,10 +79,10 @@ export function LanguageToggle() {
 const es = {
   nav: {
     tag: "Webs que venden",
-    links: ["Inicio", "Proyectos", "Servicios", "Paquetes", "Contacto"],
+    links: ["Inicio", "Proyectos", "Servicios", "Contacto"],
     quote: "Pedir presupuesto",
     quoteShort: "Presupuesto",
-    hrefs: ["/#inicio", "/#proyectos", "/#servicios", "/#precios", "/#contacto"],
+    hrefs: ["/#inicio", "/#proyectos", "/#servicios", "/#contacto"],
   },
   waGeneral: "Hola Nicolás, quiero un presupuesto sin compromiso para mi negocio.",
   hero: {
@@ -200,20 +200,6 @@ const es = {
     title: "En qué estoy trabajando.",
     see: "Ver proyecto →",
   },
-  pricing: {
-    title: "Un paquete para cada momento de tu negocio.",
-    sub: "Contame qué vendés y te digo cuál te conviene. Sin compromiso.",
-    from: "Desde",
-    times: {
-      "Landing Page": "Entrega en días",
-      "Sitio con gestion y catalogo": "Entrega en 1–2 semanas",
-      "E-commerce Premium": "Entrega en 3–6 semanas",
-    } as Record<string, string>,
-    cta: "Pedir presupuesto",
-    waService: (name: string) =>
-      `Hola Nicolás, me interesa el paquete ${name}. ¿Me pasás presupuesto?`,
-    note: "Soporte de 30 días incluido en todos los paquetes.",
-  },
   faq: {
     title: "Sacate las dudas.",
     items: [
@@ -254,7 +240,7 @@ const es = {
     sections: "Secciones",
     services: "Servicios",
     direct: "Contacto directo",
-    links: ["Servicios", "Trabajos", "Paquetes", "Preguntas"] as string[],
+    links: ["Servicios", "Trabajos", "Preguntas"] as string[],
     waCta: "Escribime por WhatsApp →",
     waMsg: "Hola Nicolás, quiero un presupuesto sin compromiso para mi negocio.",
     bottom2: "Sitios web que venden.",
@@ -330,10 +316,10 @@ export type Dict = typeof es;
 const en: Dict = {
   nav: {
     tag: "Websites that sell",
-    links: ["Home", "Projects", "Services", "Packages", "Contact"],
+    links: ["Home", "Projects", "Services", "Contact"],
     quote: "Get a quote",
     quoteShort: "Quote",
-    hrefs: ["/#inicio", "/#proyectos", "/#servicios", "/#precios", "/#contacto"],
+    hrefs: ["/#inicio", "/#proyectos", "/#servicios", "/#contacto"],
   },
   waGeneral: "Hi Nicolás, I want a no-commitment quote for my business.",
   hero: {
@@ -451,20 +437,6 @@ const en: Dict = {
     title: "What I'm working on.",
     see: "See project →",
   },
-  pricing: {
-    title: "A package for every stage of your business.",
-    sub: "Tell me what you sell and I'll tell you which one suits you. No commitment.",
-    from: "From",
-    times: {
-      "Landing Page": "Delivery in days",
-      "Sitio con gestion y catalogo": "Delivery in 1–2 weeks",
-      "E-commerce Premium": "Delivery in 3–6 weeks",
-    } as Record<string, string>,
-    cta: "Get a quote",
-    waService: (name: string) =>
-      `Hi Nicolás, I'm interested in the ${name} package. Can you quote me?`,
-    note: "30 days of support included in every package.",
-  },
   faq: {
     title: "Questions, answered.",
     items: [
@@ -505,7 +477,7 @@ const en: Dict = {
     sections: "Sections",
     services: "Services",
     direct: "Direct contact",
-    links: ["Services", "Work", "Packages", "FAQ"] as string[],
+    links: ["Services", "Work", "FAQ"] as string[],
     waCta: "Write me on WhatsApp →",
     waMsg: "Hi Nicolás, I want a no-commitment quote for my business.",
     bottom2: "Websites that sell.",

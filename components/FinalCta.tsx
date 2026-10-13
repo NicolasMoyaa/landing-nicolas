@@ -8,7 +8,7 @@ export default function FinalCta() {
   const { lang } = useLang();
   const t = strings[lang];
   const names = t.services.names;
-  const navHrefs = ["/#servicios", "/#proyectos", "/#precios", "/#faq"];
+  const navHrefs = ["/#servicios", "/#proyectos", "/#faq"];
 
   return (
     <>
